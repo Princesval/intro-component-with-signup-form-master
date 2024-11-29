@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    
+    /* ### Primary */
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+    --DarkBlue: hsl(249, 10%, 26%) ;
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-color: var(--Red);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    width: 80vw;
+}
+
+#title-section {
+    box-sizing: border-box;
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+    background-color: transparent;
+}
+
+#title-section h1 {
+    font-size: 3em;
+    color: white;
+}
+
+#title-section p {
+    color: white;
+}
+
+#form-section {
+    width: 50%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+#try-free-div {
+    background-color: var(--Blue);
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#form-div {
+    padding: 10px 30px 30px 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid var(--GrayishBlue);
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.input-container img {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-5%);
+    width: 20px; 
+    height: auto;
+    pointer-events: none; 
+}
+
+input::placeholder {
+    font-weight: bold;
+}
+
+span {
+    color: var(--Red);
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: right;
+    display: none;
+}
+
+#claim-button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    text-align: center;
+    color: white;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+#form-div p {
+    color: var(--GrayishBlue);
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#form-div p > a {
+    color: var(--Red);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+@media(max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+
+    #title-section {
+        width: 100%;
+        padding-right: 0px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #title-section h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    #form-section {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
